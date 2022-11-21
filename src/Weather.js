@@ -16,13 +16,13 @@ export default function weather() {
             </li>
             <li id="conditions">weather conditions - sunny </li>
             <li id="feels_like">feels like - 26℃</li>
-            <li id="humidity">humidity - 40%</li>
-            <li id="wind">wind - 2km/h</li>
+            <li id="humidity">humidity - 40 %</li>
+            <li id="wind">wind - 2 km/h</li>
           </ul>
         </div>
         <div className="col-2">
           <img
-            src={`images/weather.jpg`}
+            src={"images/weather.jpg"}
             alt="weather"
             width="180px"
             id="icon"
