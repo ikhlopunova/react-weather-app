@@ -1,0 +1,12 @@
+body {
+  font-family: "PT Mono", monospace;
+  background-image: url("images/sky.jpg");
+  background-size: cover;
+}
+
+.container {
+  margin: 50px auto;
+  border-radius: 50px;
+  max-width: 900px;
+  align-items: stretch;
+}

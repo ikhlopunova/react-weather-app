@@ -1,0 +1,30 @@
+li {
+  list-style: none;
+  color: white;
+  font-size: 19px;
+}
+h2,
+.city {
+  text-align: center;
+}
+.city,
+.temp {
+  color: white;
+}
+
+.city {
+  padding-top: 25px;
+  text-align: center;
+  color: white;
+  font-size: 58px;
+}
+
+.temp {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
