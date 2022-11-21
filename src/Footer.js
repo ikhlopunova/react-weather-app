@@ -7,7 +7,7 @@ export default function Footer() {
       Coded by Iryna Khlopunova and is an
       <a
         className="github-footer"
-        href="https://github.com/ikhlopunova/Weather-app"
+        href="https://github.com/ikhlopunova/react-weather-app"
       >
         open-sourced on GitHub
       </a>
