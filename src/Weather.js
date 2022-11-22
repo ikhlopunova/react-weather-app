@@ -1,5 +1,6 @@
 import React from "react";
 import "./Weather.css";
+import weathericon from "./images/weather.jpg";
 
 export default function weather() {
   return (
@@ -21,12 +22,7 @@ export default function weather() {
           </ul>
         </div>
         <div className="col-2">
-          <img
-            src={"images/weather.jpg"}
-            alt="weather"
-            width="180px"
-            id="icon"
-          />
+          <img src={weathericon} alt="weather" width="180px" id="icon" />
         </div>
       </div>
     </div>
