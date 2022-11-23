@@ -25,6 +25,14 @@ h2,
   text-align: center;
 }
 
+.unit {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: -17px;
+}
+
 li:first-letter {
   text-transform: capitalize;
 }
