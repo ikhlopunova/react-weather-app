@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Weather.css";
-import weathericon from "./images/weather.jpg";
+import { Bars } from "react-loader-spinner";
 import axios from "axios";
+import weathericon from "./images/weather.jpg";
 
 export default function Weather() {
   let [loaded, setLoaded] = useState(false);
@@ -35,7 +36,7 @@ export default function Weather() {
         </div>
         <div className="row">
           <div className="col-5 offset-4">
-            <ul className="date">
+            <ul>
               <li>
                 <strong>Last updated - Saturday, 15:25</strong>
               </li>
@@ -54,6 +55,26 @@ export default function Weather() {
       </div>
     );
   } else {
-    return "Loading";
+    return (
+      <div className="row mt-5">
+        <div className="col-5 offset-4">
+          <ul>
+            <h1 className="city">
+              <strong>Your city</strong>
+            </h1>
+            <li>
+              <strong> Last updated</strong>
+            </li>
+            <li id="conditions">weather conditions</li>
+            <li id="feels_like">feels like</li>
+            <li id="humidity">humidity</li>
+            <li id="wind">wind</li>
+          </ul>
+        </div>
+        <div className="col-2">
+          <img src={weathericon} alt="weather" width="180px" className="mt-5" />
+        </div>
+      </div>
+    );
   }
 }
