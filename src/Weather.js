@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Weather.css";
-import { Bars } from "react-loader-spinner";
+// import { Bars } from "react-loader-spinner";
 import axios from "axios";
 import weathericon from "./images/weather.jpg";
+import ActualDate from "./ActualDate";
 
 export default function Weather() {
   let [loaded, setLoaded] = useState(false);
@@ -13,6 +14,7 @@ export default function Weather() {
     setWeather({
       city: response.data.name,
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
       feels_like: response.data.main.feels_like,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -38,7 +40,9 @@ export default function Weather() {
           <div className="col-5 offset-4">
             <ul>
               <li>
-                <strong>Last updated - Saturday, 15:25</strong>
+                <strong>
+                  <ActualDate date={weather.date} />
+                </strong>
               </li>
               <li id="conditions">{weather.description}</li>
               <li id="feels_like">
