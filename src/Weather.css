@@ -36,3 +36,8 @@ h2,
 li:first-letter {
   text-transform: capitalize;
 }
+
+.form {
+  position: relative;
+  left: 50%;
+}
