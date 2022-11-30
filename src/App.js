@@ -8,7 +8,7 @@ export default function App() {
     <div className="App">
       <div className="container" style={{ backgroundImage: `url(${img})` }}>
         <div className="row">
-          <Weather defaultCity="London" />
+          <Weather defaultCity="Cairo" />
           <Footer />
         </div>
       </div>
