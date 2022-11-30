@@ -1,0 +1,35 @@
+.day-clear {
+  background-image: url(../images/day-clear.jpg);
+}
+
+.day-clouds {
+  background-image: url(../images/day-clouds.jpg);
+}
+
+.day-rain {
+  background-image: url(../images/day-rain.jpg);
+}
+
+.mist {
+  background-image: url(../images/mist.jpg);
+}
+
+.night-clear {
+  background-image: url(../images/night-clear.jpg);
+}
+
+.night-clouds {
+  background-image: url(../images/night-clouds.jpg);
+}
+
+.night-rain {
+  background-image: url(../images/night-rain.jpg);
+}
+
+.snow {
+  background-image: url(../images/snow.jpg);
+}
+
+.storm {
+  background-image: url(../images/storm.jpg);
+}

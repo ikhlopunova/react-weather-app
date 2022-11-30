@@ -9,6 +9,45 @@ export default function Weather(props) {
   let [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState(null);
   let [city, setCity] = useState(props.defaultCity);
+  const [background, setBackground] = useState("");
+
+  function changeBackground(weatherCondition) {
+    if (weatherCondition === "01d" || weatherCondition === "01n") {
+      setBackground("clear");
+    }
+
+    if (
+      weatherCondition === "02d" ||
+      weatherCondition === "02n" ||
+      weatherCondition === "03d" ||
+      weatherCondition === "03n" ||
+      weatherCondition === "04d" ||
+      weatherCondition === "04n"
+    ) {
+      setBackground("clouds");
+    }
+
+    if (
+      weatherCondition === "09d" ||
+      weatherCondition === "10d" ||
+      weatherCondition === "09n" ||
+      weatherCondition === "10n"
+    ) {
+      setBackground("rain");
+    }
+
+    if (weatherCondition === "11d" || weatherCondition === "11n") {
+      setBackground("strom");
+    }
+
+    if (weatherCondition === "13d" || weatherCondition === "13n") {
+      setBackground("snow");
+    }
+
+    if (weatherCondition === "50d" || weatherCondition === "50n") {
+      setBackground("mist");
+    }
+  }
 
   function showWeather(response) {
     setWeather({
@@ -21,6 +60,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
     });
+    changeBackground(response.data.weather[0].icon);
 
     setLoaded(true);
   }

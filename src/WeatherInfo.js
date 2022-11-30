@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import ActualDate from "./ActualDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
+  const [background, setBackground] = useState("");
+
   return (
-    <div>
+    <div className={`app ${background}`}>
       <h1 className="city">{props.data.city}</h1>
       <div className="row">
         <Temperature celcius={props.data.temperature} />
