@@ -1,35 +1,35 @@
 .day-clear {
-  background-image: url(../images/day-clear.jpg);
+  background-image: url("images/clear.jpg");
 }
 
 .day-clouds {
-  background-image: url(../images/day-clouds.jpg);
+  background-image: url("images/clouds.jpg");
 }
 
 .day-rain {
-  background-image: url(../images/day-rain.jpg);
+  background-image: url("images/rain.jpg");
 }
 
 .mist {
-  background-image: url(../images/mist.jpg);
+  background-image: url("images/mist.jpg");
 }
 
 .night-clear {
-  background-image: url(../images/night-clear.jpg);
+  background-image: url("images/clear.jpg");
 }
 
 .night-clouds {
-  background-image: url(../images/night-clouds.jpg);
+  background-image: url("images/clouds.jpg");
 }
 
 .night-rain {
-  background-image: url(../images/night-rain.jpg);
+  background-image: url("images/rain.jpg");
 }
 
 .snow {
-  background-image: url(../images/snow.jpg);
+  background-image: url("images/snow.jpg");
 }
 
 .storm {
-  background-image: url(../images/storm.jpg);
+  background-image: url("images/storm.jpg");
 }

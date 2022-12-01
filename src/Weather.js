@@ -4,6 +4,7 @@ import "./Weather.css";
 import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo";
+import "./BackgroundImages.css";
 
 export default function Weather(props) {
   let [loaded, setLoaded] = useState(false);
@@ -12,40 +13,38 @@ export default function Weather(props) {
   const [background, setBackground] = useState("");
 
   function changeBackground(weatherCondition) {
-    if (weatherCondition === "01d" || weatherCondition === "01n") {
-      setBackground("clear");
-    }
-
-    if (
+    if (weatherCondition === "01d") {
+      setBackground("day-clear");
+    } else if (weatherCondition === "01n") {
+      setBackground("night-clear");
+    } else if (
       weatherCondition === "02d" ||
-      weatherCondition === "02n" ||
       weatherCondition === "03d" ||
+      weatherCondition === "04d"
+    ) {
+      setBackground("day-clouds");
+    } else if (
+      weatherCondition === "02n" ||
       weatherCondition === "03n" ||
-      weatherCondition === "04d" ||
       weatherCondition === "04n"
     ) {
-      setBackground("clouds");
-    }
-
-    if (
-      weatherCondition === "09d" ||
-      weatherCondition === "10d" ||
-      weatherCondition === "09n" ||
-      weatherCondition === "10n"
-    ) {
-      setBackground("rain");
-    }
-
-    if (weatherCondition === "11d" || weatherCondition === "11n") {
-      setBackground("strom");
-    }
-
-    if (weatherCondition === "13d" || weatherCondition === "13n") {
-      setBackground("snow");
-    }
-
-    if (weatherCondition === "50d" || weatherCondition === "50n") {
-      setBackground("mist");
+      setBackground("night-clouds");
+    } else if (weatherCondition === "09d" || weatherCondition === "10d") {
+      setBackground("day-rain");
+    } else if (weatherCondition === "09n" || weatherCondition === "10n") {
+      setBackground("night-rain");
+    } else if (weatherCondition === "11d") {
+      setBackground("day-storm");
+    } else if (weatherCondition === "11n") {
+      setBackground("night-storm");
+    } else if (weatherCondition === "13d") {
+      setBackground("day-snow");
+    } else if (weatherCondition === "13n") {
+      setBackground("night-snow");
+    } else if (weatherCondition === "50d") {
+      setBackground("day-mist");
+    } else if (weatherCondition === "50n") {
+      setBackground("night-mist");
     }
   }
 
@@ -81,7 +80,7 @@ export default function Weather(props) {
 
   if (loaded) {
     return (
-      <div>
+      <div className={background}>
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-3">

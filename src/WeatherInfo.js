@@ -4,6 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
+  // eslint-disable-next-line
   const [background, setBackground] = useState("");
 
   return (
@@ -32,7 +33,6 @@ export default function WeatherInfo(props) {
           <WeatherIcon code={props.data.icon} />
         </div>
       </div>
-      ;
     </div>
   );
 }
