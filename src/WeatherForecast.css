@@ -1,0 +1,11 @@
+.weatherForecast {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 20px;
+  background-color: #0d6efd;
+}
+
+.day {
+  font-size: 28px;
+}

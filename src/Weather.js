@@ -4,6 +4,7 @@ import "./Weather.css";
 import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./BackgroundImages.css";
 
 export default function Weather(props) {
@@ -102,10 +103,11 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weather} />
+        <WeatherForecast />
       </div>
     );
   } else {
     search();
-    return null;
+    return "Loading...";
   }
 }
