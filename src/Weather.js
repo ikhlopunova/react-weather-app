@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Weather.css";
-// import { Bars } from "react-loader-spinner";
 import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo";
@@ -86,7 +85,7 @@ export default function Weather(props) {
       <div className={background}>
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-3">
+            <div className="col-md-3">
               <input
                 onChange={handleChange}
                 type="search"
@@ -95,7 +94,7 @@ export default function Weather(props) {
                 className="form-control w-100"
               />
             </div>
-            <div className="col-2">
+            <div className="col-md-2">
               <input
                 type="submit"
                 value="Search"

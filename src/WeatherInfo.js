@@ -13,8 +13,8 @@ export default function WeatherInfo(props) {
       <div className="row">
         <Temperature celcius={props.data.temperature} />
       </div>
-      <div className="row">
-        <div className="col-5 offset-4">
+      <div className="row weather-info">
+        <div className="col-md-5 offset-4">
           <ul>
             <li>
               <strong>
@@ -29,7 +29,7 @@ export default function WeatherInfo(props) {
             <li id="wind">wind - {Math.round(props.data.wind)} km/h</li>
           </ul>
         </div>
-        <div className="col-2">
+        <div className="col-md-2">
           <WeatherIcon code={props.data.icon} size={140} />
         </div>
       </div>
