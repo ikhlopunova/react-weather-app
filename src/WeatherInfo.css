@@ -1,0 +1,10 @@
+@media (max-width: 810px) {
+  .icon {
+    text-align: center;
+    margin-left: 40px;
+  }
+  .weather-info {
+    text-align: left;
+    margin-left: -80px;
+  }
+}

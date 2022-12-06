@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ActualDate from "./ActualDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   // eslint-disable-next-line
@@ -29,7 +30,7 @@ export default function WeatherInfo(props) {
             <li id="wind">wind - {Math.round(props.data.wind)} km/h</li>
           </ul>
         </div>
-        <div className="col-md-2">
+        <div className="col-md-2 icon">
           <WeatherIcon code={props.data.icon} size={140} />
         </div>
       </div>
